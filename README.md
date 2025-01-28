@@ -59,7 +59,7 @@ chmod +x ninstall
    ```  
 3. Start NJMON to log monitoring data to InfluxDB.
    ```bash
-/usr/lbin/nimon -s 30 -k -i <IP of influxdb> -p 8086 -x njmon -O <organization-name> -T <API-Token-with-write-access-to-bucket>
+   /usr/lbin/nimon -s 30 -k -i <IP of influxdb> -p 8086 -x njmon -O <organization-name> -T <API-Token-with-write-access-to-bucket>
    ```
 
 ### InfluxDB2 Configuration
