@@ -64,7 +64,7 @@ chmod +x ninstall
 
 ### InfluxDB2 Configuration
 
-1. Install and set up InfluxDB2 on your server. Refer to the [official InfluxDB2 documentation](https://docs.influxdata.com/influxdb/latest/get-started/).
+1. Install and set up InfluxDB2 on your server. Refer to the [official InfluxDB2 documentation](https://docs.influxdata.com/influxdb/v2/install/).
 2. Create a bucket for storing AIX metrics.
 3. Generate an API token for NJMON to authenticate with InfluxDB2.
 4. Verify NJMON is sending data by querying the bucket:
@@ -84,7 +84,7 @@ chmod +x ninstall
      - Token: `<YOUR_TOKEN>`
 3. Import the provided Grafana dashboard JSON file:
    - Go to **Dashboards > Import**.
-   - Upload the `aix_dashboard.json` file from this repository.
+   - Upload the [njmon_v86_for_AIX_with_influxdb2.json](https://github.com/regmianp/AIXnjmondashboard/blob/main/njmon_v86_for_AIX_with_influxdb2.json) file from this repository.
 4. Verify the dashboard displays metrics from your AIX system.
 
 ---
