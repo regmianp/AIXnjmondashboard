@@ -15,7 +15,6 @@ This repository provides a setup guide and Grafana dashboard configuration for m
    - [Grafana Dashboard Setup](#grafana-dashboard-setup)
 5. [Dashboards](#dashboards)
 6. [Contributing](#contributing)
-7. [License](#license)
 
 ---
 
@@ -50,14 +49,15 @@ The architecture consists of three main components:
 
 ### NJMON Setup on AIX
 
-1. Download NJMON v86 from the official [NJMON GitHub repository](https://github.com/nmonvisualizer/njmon).
-2. Install NJMON on the AIX system, with root user privelage, executing ninstall file in the njmon package.
+1. Download NJMON v86 from the official [NJMON repository](https://nmon.sourceforge.io/pmwiki.php?n=Site.Njmon).
+2. Install NJMON on the AIX system, with root user privilege, executing ninstall file in the njmon package.
   ```bash
 unzip njmon_aix_v86.zip
 cd njmon_aix_v86
 chmod +x ninstall
+./ninstall
    ```  
-4. Start NJMON to log monitoring data to InfluxDB.
+3. Start NJMON to log monitoring data to InfluxDB.
    ```bash
 /usr/lbin/nimon -s 30 -k -i <IP of influxdb> -p 8086 -x njmon -O <organization-name> -T <API-Token-with-write-access-to-bucket>
    ```
